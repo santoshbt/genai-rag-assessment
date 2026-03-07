@@ -1,0 +1,47 @@
+# Core Framework
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+python-multipart==0.0.9
+pydantic>=2.7.1
+pydantic-settings>=2.3.0
+
+# Document Parsing
+docling>=2.0.0
+
+# Embeddings & LLM - HuggingFace
+sentence-transformers==3.0.0
+transformers>=4.30.0
+torch>=2.0.0
+
+# Groq API (for fast LLM inference)
+groq>=0.4.0
+
+# Vector Store - ChromaDB (local, free)
+chromadb>=0.4.0
+
+# BM25 (simple query routing)
+rank-bm25==0.2.2
+nltk==3.8.1
+
+# LangChain - Memory with summarization
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-groq>=0.2.0
+langchain-community>=0.3.0
+langchain-classic>=1.0.0
+sqlalchemy==2.0.30
+
+# Observability & Logging
+structlog==24.1.0
+prometheus-client==0.20.0
+
+# Utilities
+python-dotenv==1.0.1
+httpx==0.27.0
+tenacity==8.3.0
+aiofiles==23.2.1
+scikit-learn>=1.0.0
+
+# UI (optional)
+streamlit>=1.31.0
+
