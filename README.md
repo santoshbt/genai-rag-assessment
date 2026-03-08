@@ -29,6 +29,7 @@ I have mainly focussed on the following layers
 
 5) ChromaDB - Dense indexing
       - It is useful for storing the embeddings and dense vector search
+      - It also stores the metadata to filter search results before the retrieval to narrow down the relevant documents
       - It finds synonyms and handles paraphrasing
       - It is a fallback when BM25 (Keyword search) is empty
       - It acts as a primary source of text corpus to keyword search (BM25)
@@ -38,6 +39,8 @@ I have mainly focussed on the following layers
       - Based on the query length it will route to keyword search
       - It is good for static data like names, Ids or readily available information
       - It is much more faster comare to vector search and 4x faster comparaively
+      - When app starts, it fetches all chunks from ChromaDB and loads temporarily into RAM.
+      - It builds the search index.
 
 7) ConversationSummaryMemory
       - This is for reference to the prevous conversations in asummarized format
