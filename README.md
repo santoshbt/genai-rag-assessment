@@ -33,6 +33,7 @@ I have mainly focussed on the following layers
       - It finds synonyms and handles paraphrasing
       - It is a fallback when BM25 (Keyword search) is empty
       - It acts as a primary source of text corpus to keyword search (BM25)
+      - This application runs chroma db in local, hence no api key is required.
 
 6) BM25 - Sparse Indexing
       - It is the keyword matching for simple queries
@@ -75,6 +76,7 @@ Ingestion -> Guardrails → Cache → Memory → Routing → Retrieval → Gener
 1) Query rewriting to understand typos and user intentions
 2) Multi Vector retriever implementation -> Useful when single chunk not being findable from different query styles.
 3) Semantic caching, right now I am using only static caching which is not very efficient
+4) Use more sophesticated vector DBs like Pinecone in production mode
 
 
 ---
@@ -95,7 +97,7 @@ pip install -r requirements.txt
 
 # 4. Configure environment
 cp .env.example .env
-# Edit .env — add your OPENAI_API_KEY and PINECONE_API_KEY
+# Edit .env — add your GROQ_API_KEY and HF_API_TOKEN
 
 # 5. Start the server
 python main.py
