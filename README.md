@@ -10,7 +10,7 @@ I have mainly focussed on the following layers
       - This in turn helps in coherance and accuracy while retrieval.
       - Redacting the sensitive information, even before sending it to the chunking phase
       - Remove any greetings or normal words which may not add up much weightage to the information. This is done to avoid chunking unnecessary data. 
-      - It acts as a guardrail for pre-chunking phase and redacts any PII data or sonract details wgile chunking.
+      - It acts as a guardrail for pre-chunking phase and redacts any PII data or contact details while chunking.
       - Tradeoff : It can add up some latency and slower compared to simple parsers
       - It can use more memory due to added metadata
         
